@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/6acde1a3-7011-4e13-a7a4-2c8b68bec275/resourceGroups/NCAG/providers/Microsoft.Web/sites/ncagchurch",
+    "appService.deploySubpath": ""
+}
