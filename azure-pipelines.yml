@@ -17,6 +17,11 @@ steps:
 
 - script: npm install
   displayName: 'Install Dependencies'
+  
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'npm update --save-dev @types/node'
 
 - script: npx ng test --watch=false
   displayName: 'Tests'
