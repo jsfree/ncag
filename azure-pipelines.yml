@@ -18,13 +18,12 @@ steps:
 - script: npm install
   displayName: 'Install Dependencies'
   
-- task: Npm@1
-  inputs:
-    command: 'custom'
-    customCommand: 'npm install @types/node@latest'
-
-- script: npx ng test --watch=false
-  displayName: 'Tests'
-
 - script: npx ng build --prod
   displayName: 'Build'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'dist/ng-azure-devops'
+    ArtifactName: 'web-app'
+    publishLocation: 'Container'
+  displayName: 'Publish Artifacts'
