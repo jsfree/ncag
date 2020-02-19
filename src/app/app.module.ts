@@ -22,6 +22,7 @@ import { OurVisionComponent } from './about/our-vision/our-vision.component';
 import { OnlineGivingComponent } from './online-giving/online-giving.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
+import {CountdownModule} from "ng2-date-countdown";
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CountdownModule,
   ],
   providers: [ImageService, ImageFilterPipe],
   bootstrap: [AppComponent]

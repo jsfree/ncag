@@ -13,7 +13,6 @@ visibleImages: any[] = [];
   constructor(private imageService: ImageService) { 
     this.visibleImages = this.imageService.getImages();
   }
-
   ngOnChanges(){
     this.visibleImages = this.imageService.getImages();
   }
@@ -23,3 +22,4 @@ visibleImages: any[] = [];
 
   
 }
+
