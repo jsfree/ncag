@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import { ImageService } from './shared/image.service';
 import {ImageFilterPipe} from './shared/filter.pipe'
 
@@ -43,13 +43,14 @@ import {CountdownModule} from "ng2-date-countdown";
     OnlineGivingComponent,
     GalleryComponent,
     ImageDetailComponent,
-    ImageFilterPipe
+    ImageFilterPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CountdownModule,
   ],
+
   providers: [ImageService, ImageFilterPipe],
   bootstrap: [AppComponent]
 })

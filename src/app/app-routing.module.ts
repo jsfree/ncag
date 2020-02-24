@@ -34,7 +34,7 @@ import {ImageDetailComponent} from './image-detail/image-detail.component';
     {path: 'contact', component: ContactComponent},
     
     { path: '**', component: PageNotFoundComponent }
-  ])
+  ],{scrollPositionRestoration:'top'})
 ],
   exports: [RouterModule]
 })
