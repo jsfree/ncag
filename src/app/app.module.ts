@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import { ImageService } from './shared/image.service';
 import {ImageFilterPipe} from './shared/filter.pipe'
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,6 +50,7 @@ import {CountdownModule} from "ng2-date-countdown";
     BrowserModule,
     AppRoutingModule,
     CountdownModule,
+    HttpClientModule
   ],
 
   providers: [ImageService, ImageFilterPipe],

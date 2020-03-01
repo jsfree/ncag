@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Beliefs</title>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <app-navbar></app-navbar>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Introduction Row -->
+      <h1 style="color:white;">Beliefs</h1>
+      <!-- Team Members Row -->
+      <div class="row" *ngIf="arrBeliefs">
+        <div class="col-lg-12">
+          <h2 style="color:white;">The 16 Tenets</h2>
+          <p style="color:white;">&emsp;These are nonnegotiable tenets of faith that all Assemblies of God churches adhere to. This list is derived from the official Statement of Fundamental Truths. You may go online to <b><a href="www.ag.org" style="color:white;">www.ag.org</a></b> or ask for a copy of the New Covenant Assembly of God Constitution and Bylaws for more information or scriptural support.</p>
+        </div>
+        <div id="accordion" style="background-color:white; width:100%;">
+<!--Tenet 1-->
+          <div class="card" *ngFor="let belief of arrBeliefs">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  {{belief.ID}}. {{belief.Title}}
+                </button>
+              </h5>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                {{belief.Header}}
+                <ul>
+                <li>
+                  <div class="container">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+                      {{belief.Scripture1}}
+                    </button>
+                  
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                        
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                            <h4 class="modal-title">2 Timothy 3:15-17 (NIV)</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+                          
+                          <!-- Modal body -->
+                          <div class="modal-body">
+                              <b>15</b> and how from infancy you have known the Holy Scriptures, which are able to make you wise for salvation through faith in Christ Jesus. <b>16</b> All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness, <b>17</b> so that the servant of God may be thoroughly equipped for every good work.
+                          </div>
+                          
+                          <!-- Modal footer -->
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </li>
+                <li>
+                    <div class="container">
+                      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal2">
+                          1 Thessalonians 2:13
+                      </button>
+                    
+                      <!-- The Modal -->
+                      <div class="modal" id="myModal2">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                          
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">1 Thessalonians 2:13 (NIV)</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <b>13</b> And we also thank God continually because, when you received the word of God, which you heard from us, you accepted it not as a human word, but as it actually is, the word of God, which is indeed at work in you who believe.
+                            </div>
+                            
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </li>
+                  <li>
+                      <div class="container">
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal3">
+                            2 Peter 1:21
+                        </button>
+                      
+                        <!-- The Modal -->
+                        <div class="modal" id="myModal3">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                            
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                <h4 class="modal-title">2 Peter 1:21 (NIV)</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              
+                              <!-- Modal body -->
+                              <div class="modal-body">
+                                  <b>21</b> For prophecy never had its origin in the human will, but prophets, though human, spoke from God as they were carried along by the Holy Spirit.                              </div>
+                              
+                              <!-- Modal footer -->
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </li>
+              </ul>
+              </div>
+            </div>
+          </div>
+</div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
+
+<router-outlet></router-outlet>

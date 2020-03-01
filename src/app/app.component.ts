@@ -3,6 +3,7 @@ import "./app.component.scss";
 import "src/assets/jquery/jquery.min.js";
 import "src/assets/js/bootstrap.bundle.min.js";
 
+
 @Component({
   selector: 'app-root',
   template: `
