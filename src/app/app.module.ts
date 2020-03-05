@@ -24,6 +24,7 @@ import { OnlineGivingComponent } from './online-giving/online-giving.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
 import {CountdownModule} from "ng2-date-countdown";
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {CountdownModule} from "ng2-date-countdown";
     BrowserModule,
     AppRoutingModule,
     CountdownModule,
-    HttpClientModule
+    HttpClientModule,
+    ScullyLibModule
   ],
 
   providers: [ImageService, ImageFilterPipe],
