@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import "./app.component.scss";
 import "src/assets/jquery/jquery.min.js";
 import "src/assets/js/bootstrap.bundle.min.js";
-
+declare const create_tithely_widget: any;
 
 @Component({
   selector: 'app-root',
@@ -17,4 +17,8 @@ import "src/assets/js/bootstrap.bundle.min.js";
 })
 export class AppComponent {
   title = 'New Covenant Assembly of God';
+
+  onClick(){
+    create_tithely_widget();
+  }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+declare function create_tithely_widget(): void;
+
 
 @Component({
   selector: 'app-online-giving',
@@ -11,5 +13,4 @@ export class OnlineGivingComponent implements OnInit {
 
   ngOnInit() {
   }
-
-}
+  }
